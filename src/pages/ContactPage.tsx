@@ -78,7 +78,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
             <div className="lg:col-span-2 space-y-6">
               <div>
-                <p className="text-base font-medium text-amber-700 dark:text-amber-400 mb-1">
+                <p className="text-base font-medium text-amber-700 dark:text-amber-300 mb-1">
                   {tr(lang, 'நேரடி தொடர்பு', 'Direct Contact')}
                 </p>
                 <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">
@@ -88,29 +88,29 @@ export default function ContactPage() {
 
               <div className="space-y-5 rounded-2xl p-6 bg-slate-50 dark:bg-[#10192D] border border-slate-200 dark:border-white/10">
                 <div className="flex items-start gap-3.5">
-                  <MapPin className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-amber-600 dark:text-amber-300 shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-0.5">
+                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-300 mb-0.5">
                       {tr(lang, 'Address', 'முகவரி')}
                     </p>
                     <p className="text-sm font-medium text-slate-900 dark:text-white" style={{ fontFamily: 'var(--font-tamil)' }}>
                       {SITE_INFO.addressTamil}
                     </p>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                    <p className="text-sm text-slate-600 dark:text-slate-200">
                       {tr(lang, SITE_INFO.addressEnglish, 'மல்லன்குழி, தாளவாடி, தமிழ்நாடு, இந்தியா')}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <Phone className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                  <Phone className="w-5 h-5 text-amber-600 dark:text-amber-300 shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-0.5">
+                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-300 mb-0.5">
                       {tr(lang, 'Phone / WhatsApp', 'தொலைபேசி / WhatsApp')}
                     </p>
                     <a
                       href={SITE_INFO.phoneHref}
-                      className="text-sm font-semibold text-slate-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 tabular-nums"
+                      className="text-sm font-semibold text-slate-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-300 tabular-nums"
                     >
                       {SITE_INFO.phoneDisplay}
                     </a>
@@ -118,14 +118,14 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <Mail className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                  <Mail className="w-5 h-5 text-amber-600 dark:text-amber-300 shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-0.5">
+                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-300 mb-0.5">
                       {tr(lang, 'Email', 'மின்னஞ்சல்')}
                     </p>
                     <a
                       href={`mailto:${SITE_INFO.email}`}
-                      className="text-sm font-medium text-slate-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400"
+                      className="text-sm font-medium text-slate-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-300"
                     >
                       {SITE_INFO.email}
                     </a>
@@ -133,15 +133,15 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <Clock className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                  <Clock className="w-5 h-5 text-amber-600 dark:text-amber-300 shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-0.5">
+                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-300 mb-0.5">
                       {tr(lang, 'Ashram Hours', 'ஆசிரம நேரம்')}
                     </p>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 tabular-nums">
+                    <p className="text-sm text-slate-600 dark:text-slate-200 tabular-nums">
                       {tr(lang, 'Daily · 06:00 AM – 08:00 PM', 'தினமும் · காலை 06:00 – இரவு 08:00')}
                     </p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                    <p className="text-xs text-slate-500 dark:text-slate-300 mt-0.5">
                       {tr(lang, 'Annadhanam served daily at 12:30 PM', 'தினமும் மதியம் 12:30 மணிக்கு அன்னதானம்')}
                     </p>
                   </div>
@@ -162,7 +162,7 @@ export default function ContactPage() {
               <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-2">
                 {tr(lang, 'Send an Enquiry', 'விசாரணை அனுப்பவும்')}
               </h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300 mb-6">
+              <p className="text-sm text-slate-600 dark:text-slate-200 mb-6">
                 {tr(
                   lang,
                   'We typically respond within 24 hours via WhatsApp or email.',
@@ -175,10 +175,10 @@ export default function ContactPage() {
                   <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 inline-flex items-center justify-center mx-auto">
                     <Check className="w-7 h-7" />
                   </div>
-                  <p className="text-xl font-semibold text-amber-700 dark:text-amber-400" style={{ fontFamily: 'var(--font-tamil)' }}>
+                  <p className="text-xl font-semibold text-amber-700 dark:text-amber-300" style={{ fontFamily: 'var(--font-tamil)' }}>
                     செய்தி அனுப்பப்பட்டது!
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
+                  <p className="text-sm text-slate-600 dark:text-slate-200 max-w-md mx-auto">
                     {tr(
                       lang,
                       'Thank you for contacting Pulipani Siddhar Aadheenam. Our team will get back to you shortly.',
@@ -198,7 +198,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="c-name" className="block text-xs font-medium text-slate-700 dark:text-slate-200 mb-1.5">
-                        {tr(lang, 'Name', 'பெயர்')} <span className="text-rose-500">*</span>
+                        {tr(lang, 'Name', 'பெயர்')} <span className="text-rose-500 dark:text-rose-400">*</span>
                       </label>
                       <input
                         id="c-name"
@@ -206,12 +206,12 @@ export default function ContactPage() {
                         type="text"
                         required
                         placeholder={tr(lang, 'Your name', 'உங்கள் பெயர்')}
-                        className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                        className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                       />
                     </div>
                     <div>
                       <label htmlFor="c-mobile" className="block text-xs font-medium text-slate-700 dark:text-slate-200 mb-1.5">
-                        {tr(lang, 'Mobile / WhatsApp', 'மொபைல் / WhatsApp')} <span className="text-rose-500">*</span>
+                        {tr(lang, 'Mobile / WhatsApp', 'மொபைல் / WhatsApp')} <span className="text-rose-500 dark:text-rose-400">*</span>
                       </label>
                       <input
                         id="c-mobile"
@@ -219,7 +219,7 @@ export default function ContactPage() {
                         type="tel"
                         required
                         placeholder="+91 XXXXX XXXXX"
-                        className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                        className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                       />
                     </div>
                   </div>
@@ -227,7 +227,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="c-email" className="block text-xs font-medium text-slate-700 dark:text-slate-200 mb-1.5">
-                        {tr(lang, 'Email', 'மின்னஞ்சல்')} <span className="text-rose-500">*</span>
+                        {tr(lang, 'Email', 'மின்னஞ்சல்')} <span className="text-rose-500 dark:text-rose-400">*</span>
                       </label>
                       <input
                         id="c-email"
@@ -235,7 +235,7 @@ export default function ContactPage() {
                         type="email"
                         required
                         placeholder="your@email.com"
-                        className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                        className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                       />
                     </div>
                     <div>
@@ -258,7 +258,7 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="c-message" className="block text-xs font-medium text-slate-700 dark:text-slate-200 mb-1.5">
-                      {tr(lang, 'Message', 'செய்தி')} <span className="text-rose-500">*</span>
+                      {tr(lang, 'Message', 'செய்தி')} <span className="text-rose-500 dark:text-rose-400">*</span>
                     </label>
                     <textarea
                       id="c-message"
@@ -266,7 +266,7 @@ export default function ContactPage() {
                       rows={4}
                       required
                       placeholder={tr(lang, 'How can we assist you?', 'நாங்கள் உங்களுக்கு எவ்வாறு உதவலாம்?')}
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
 
@@ -311,16 +311,16 @@ export default function ContactPage() {
                 >
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <div className="flex items-center gap-2">
-                      <Compass className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" aria-hidden="true" />
+                      <Compass className="w-4 h-4 text-amber-600 dark:text-amber-300 shrink-0" aria-hidden="true" />
                       <h3 className="text-base font-semibold text-slate-900 dark:text-white">
                         {tr(lang, item.origin, taRoute?.origin ?? item.origin)}
                       </h3>
                     </div>
-                    <span className="text-xs font-semibold text-amber-700 dark:text-amber-400 tabular-nums whitespace-nowrap shrink-0">
+                    <span className="text-xs font-semibold text-amber-700 dark:text-amber-300 tabular-nums whitespace-nowrap shrink-0">
                       {tr(lang, item.distance, taRoute?.distance ?? item.distance)}
                     </span>
                   </div>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed">
                     {tr(lang, item.route, taRoute?.route ?? item.route)}
                   </p>
                 </article>
@@ -333,7 +333,7 @@ export default function ContactPage() {
               <h3 className="text-base font-semibold text-slate-900 dark:text-white">
                 {tr(lang, 'Planning a Group Visit or Overnight Ashram Stay?', 'குழு வருகை அல்லது ஆசிரமத் தங்குமிடம் திட்டமிடுகிறீர்களா?')}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-200 mt-1">
                 {tr(
                   lang,
                   'Please inform us via WhatsApp at least 2 days in advance so we can arrange accommodation and Annadhanam.',

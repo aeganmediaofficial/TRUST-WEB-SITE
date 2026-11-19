@@ -112,14 +112,14 @@ export default function VolunteerPage() {
                 key={w.enTitle}
                 className="rounded-xl p-6 bg-slate-50 dark:bg-[#10192D] border border-slate-200 dark:border-white/10"
               >
-                <p className="text-xs text-slate-400 tabular-nums mb-2">0{idx + 1}</p>
-                <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-0.5">
+                <p className="text-xs text-slate-500 dark:text-slate-300 tabular-nums mb-2">0{idx + 1}</p>
+                <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-0.5">
                   {lang === 'ta' ? w.enTitle : w.taTitle}
                 </p>
                 <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
                   {tr(lang, w.enTitle, w.taTitle)}
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed">
                   {tr(lang, w.enDesc, w.taDesc)}
                 </p>
               </div>
@@ -130,7 +130,7 @@ export default function VolunteerPage() {
             <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-2">
               {tr(lang, 'Seva Mandram Registration', 'சேவா மன்றம் பதிவு')}
             </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-300 mb-6">
+            <p className="text-sm text-slate-600 dark:text-slate-200 mb-6">
               {tr(
                 lang,
                 'Share your availability and preferred area of service. Our coordinators will connect with you shortly.',
@@ -143,10 +143,10 @@ export default function VolunteerPage() {
                 <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 inline-flex items-center justify-center mx-auto">
                   <Check className="w-7 h-7" />
                 </div>
-                <p className="text-2xl font-semibold text-amber-700 dark:text-amber-400" style={{ fontFamily: 'var(--font-tamil)' }}>
+                <p className="text-2xl font-semibold text-amber-700 dark:text-amber-300" style={{ fontFamily: 'var(--font-tamil)' }}>
                   சேவைப் பதிவு வெற்றிகரமாக முடிந்தது!
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
+                <p className="text-sm text-slate-600 dark:text-slate-200 max-w-md mx-auto">
                   {tr(
                     lang,
                     'Thank you for stepping forward to serve with Seva Mandram. Our volunteer coordinator will reach out on WhatsApp.',
@@ -174,7 +174,7 @@ export default function VolunteerPage() {
                       type="text"
                       required
                       placeholder={tr(lang, 'Your name', 'உங்கள் பெயர்')}
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                   <div>
@@ -189,7 +189,7 @@ export default function VolunteerPage() {
                       max={85}
                       required
                       placeholder={tr(lang, 'Age', 'வயது')}
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                   <div>
@@ -202,7 +202,7 @@ export default function VolunteerPage() {
                       type="tel"
                       required
                       placeholder="+91 XXXXX XXXXX"
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                   <div>
@@ -215,7 +215,7 @@ export default function VolunteerPage() {
                       type="email"
                       required
                       placeholder="your@email.com"
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                   <div>
@@ -281,7 +281,7 @@ export default function VolunteerPage() {
                     name="notes"
                     rows={3}
                     placeholder={tr(lang, 'Share any relevant experience or languages...', 'உங்கள் அனுபவம் அல்லது தெரிந்த மொழிகளைப் பகிருங்கள்...')}
-                    className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                   />
                 </div>
 

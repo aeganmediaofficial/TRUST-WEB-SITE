@@ -74,12 +74,12 @@ export function DailyWisdomWidget() {
                 </div>
                 <div>
                   <p
-                    className="text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400"
+                    className="text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300"
                     style={{ fontFamily: lang === 'ta' ? 'var(--font-tamil)' : 'var(--font-sans)' }}
                   >
                     {tr(lang, 'Daily Siddhar Wisdom', 'தினசரி சித்தர் ஞானம்')}
                   </p>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                  <p className="text-xs text-slate-500 dark:text-slate-300 mt-0.5">
                     {tr(lang, current.themeEn, current.themeTa)} ·{' '}
                     <span className="tabular-nums">
                       {quoteIdx + 1} / {PULIPANI_WISDOM_QUOTES.length}
@@ -137,7 +137,7 @@ export function DailyWisdomWidget() {
                       >
                         “{current.tamil}”
                       </blockquote>
-                      <p className="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                      <p className="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-200 leading-relaxed">
                         {current.english}
                       </p>
                     </>
@@ -150,7 +150,7 @@ export function DailyWisdomWidget() {
                         “{current.english}”
                       </blockquote>
                       <p
-                        className="mt-4 text-sm sm:text-base text-amber-800 dark:text-amber-300/95 leading-relaxed font-medium"
+                        className="mt-4 text-sm sm:text-base text-amber-800 dark:text-amber-300 leading-relaxed font-medium"
                         style={{ fontFamily: 'var(--font-tamil)' }}
                       >
                         {current.tamil}
@@ -160,7 +160,7 @@ export function DailyWisdomWidget() {
 
                   <KolamRule />
 
-                  <p className="text-xs sm:text-sm font-semibold text-amber-700 dark:text-amber-400">
+                  <p className="text-xs sm:text-sm font-semibold text-amber-700 dark:text-amber-300">
                     — {tr(lang, current.sourceEn, current.sourceTa)}
                   </p>
                 </motion.div>

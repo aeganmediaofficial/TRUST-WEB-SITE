@@ -225,7 +225,7 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.08, ease: EASE_SERENE }}
               className="flex flex-col justify-center"
             >
-              <p className="text-lg font-medium text-amber-700 dark:text-amber-400 mb-1" style={{ fontFamily: 'var(--font-tamil)' }}>
+              <p className="text-lg font-medium text-amber-700 dark:text-amber-300 mb-1" style={{ fontFamily: 'var(--font-tamil)' }}>
                 {tr(lang, 'நமது ஆதீனம்', 'About Aadheenam')}
               </p>
               <h2
@@ -239,7 +239,7 @@ export default function HomePage() {
                 )}
               </h2>
               <KolamRule centered={false} />
-              <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              <p className="text-base text-slate-600 dark:text-slate-200 leading-relaxed mb-6">
                 {tr(
                   lang,
                   'Rooted in the ancient Tamil Siddhar tradition, Pulipani Siddhar Aadheenam is a sacred institution dedicated to spiritual awakening, natural living, and compassionate service. Located in Mallankuli, Thalavadi, Tamil Nadu, we offer authentic teachings, transformative programs, and community welfare initiatives that honour the timeless wisdom of the Siddhar lineage.',
@@ -251,7 +251,7 @@ export default function HomePage() {
                 {STATS.map((s) => (
                   <div key={s.label}>
                     <p className="text-xl font-bold text-slate-900 dark:text-white tabular-nums">{s.num}</p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                    <p className="text-xs text-slate-500 dark:text-slate-300 mt-0.5">
                       {tr(lang, s.label, STATS_TA[s.label] ?? s.tamil)}
                     </p>
                   </div>
@@ -310,16 +310,16 @@ export default function HomePage() {
                       <div className="hidden dark:block absolute inset-0 bg-gradient-to-t from-[#111C33] via-[#111C33]/35 to-transparent" />
                     </div>
                     <div className="p-6 flex-1 flex flex-col">
-                      <p className="text-xs text-amber-700 dark:text-amber-400 font-medium mb-1">
+                      <p className="text-xs text-amber-700 dark:text-amber-300 font-medium mb-1">
                         {lang === 'ta' ? act.english : act.tamil}
                       </p>
                       <div className="flex items-center justify-between gap-2 mb-2">
                         <h3 className="text-xl font-semibold text-slate-900 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-300 transition-colors">
                           {title}
                         </h3>
-                        <ArrowRight className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="w-4 h-4 text-amber-600 dark:text-amber-300 shrink-0 transition-transform group-hover:translate-x-1" />
                       </div>
-                      <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{desc}</p>
+                      <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed">{desc}</p>
                     </div>
                   </Link>
                 </motion.div>
@@ -362,16 +362,16 @@ export default function HomePage() {
                     <SmartImage src={ev.image} alt={title} className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
-                    <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 tabular-nums mb-2">
-                      <span className="font-semibold text-amber-700 dark:text-amber-400">{date}</span>
+                    <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-300 tabular-nums mb-2">
+                      <span className="font-semibold text-amber-700 dark:text-amber-300">{date}</span>
                       <span aria-hidden="true">·</span>
                       <span>{venue}</span>
                     </div>
-                    <p className="text-xs text-amber-700 dark:text-amber-400 font-medium mb-0.5">
+                    <p className="text-xs text-amber-700 dark:text-amber-300 font-medium mb-0.5">
                       {lang === 'ta' ? ev.english : ev.tamil}
                     </p>
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{title}</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6 flex-1">
+                    <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed mb-6 flex-1">
                       {desc}
                     </p>
                     <Link
@@ -389,7 +389,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               to="/events"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-semibold text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               <span>{tr(lang, 'View All Events', 'அனைத்து நிகழ்வுகளையும் காண்க')}</span>
               <ArrowRight className="w-4 h-4" />
@@ -404,7 +404,7 @@ export default function HomePage() {
               viewport={VIEWPORT_ONCE}
               transition={{ duration: 0.45, ease: EASE_SERENE }}
             >
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400 mb-2">
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300 mb-2">
                 <Calendar className="w-4 h-4" aria-hidden="true" />
                 <span>{tr(lang, 'Monthly Sacred Cycle', 'மாதாந்திர சிறப்பு வழிபாடுகள்')}</span>
               </div>
@@ -422,13 +422,13 @@ export default function HomePage() {
                       key={obs.id}
                       className="rounded-xl p-5 bg-slate-50 dark:bg-[#111C33] border border-slate-200 dark:border-white/10"
                     >
-                      <p className="text-xs font-semibold text-amber-700 dark:text-amber-400 mb-1">
+                      <p className="text-xs font-semibold text-amber-700 dark:text-amber-300 mb-1">
                         {tr(lang, obs.cycle, taObs?.cycle ?? obs.cycle)}
                       </p>
                       <h4 className="text-base font-semibold text-slate-900 dark:text-white mb-1.5">
                         {tr(lang, obs.english, taObs?.title ?? obs.tamil)}
                       </h4>
-                      <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-200 leading-relaxed">
                         {tr(lang, obs.desc, taObs?.desc ?? obs.desc)}
                       </p>
                     </div>
@@ -479,13 +479,13 @@ export default function HomePage() {
                       <span aria-hidden="true">·</span>
                       <span>{duration}</span>
                       <span aria-hidden="true">·</span>
-                      <span className="font-semibold text-amber-700 dark:text-amber-400">{fee}</span>
+                      <span className="font-semibold text-amber-700 dark:text-amber-300">{fee}</span>
                     </div>
-                    <p className="text-xs text-amber-700 dark:text-amber-400 font-medium mb-0.5">
+                    <p className="text-xs text-amber-700 dark:text-amber-300 font-medium mb-0.5">
                       {lang === 'ta' ? course.english : course.tamil}
                     </p>
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{title}</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6 flex-1 line-clamp-3">
+                    <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed mb-6 flex-1 line-clamp-3">
                       {desc}
                     </p>
                     <Link
@@ -548,11 +548,11 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="p-5 flex-1 flex flex-col">
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">
+                    <p className="text-xs text-slate-500 dark:text-slate-300 mb-1">
                       {cat} · {unit}
                     </p>
                     <h3 className="text-base font-semibold text-slate-900 dark:text-white mb-1">{name}</h3>
-                    <p className="text-lg font-bold text-amber-700 dark:text-amber-400 tabular-nums mb-4 mt-auto">
+                    <p className="text-lg font-bold text-amber-700 dark:text-amber-300 tabular-nums mb-4 mt-auto">
                       ₹{product.price}
                     </p>
                     <div className="flex gap-2">
@@ -578,7 +578,7 @@ export default function HomePage() {
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="py-2 px-3 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        className="py-2 px-3 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
                       >
                         WhatsApp
                       </a>
@@ -592,7 +592,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               to="/store"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-semibold text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               <span>{tr(lang, 'Visit Our Store', 'எங்கள் அங்காடியைப் பார்க்க')}</span>
               <ArrowRight className="w-4 h-4" />
@@ -633,12 +633,12 @@ export default function HomePage() {
                     <SmartImage src={mission.image} alt={title} className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
-                    <p className="text-xs text-amber-700 dark:text-amber-400 font-medium mb-1">
+                    <p className="text-xs text-amber-700 dark:text-amber-300 font-medium mb-1">
                       {lang === 'ta' ? mission.english : mission.tamil}
                     </p>
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{title}</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5 flex-1">{desc}</p>
-                    <p className="text-lg font-bold text-amber-700 dark:text-amber-400 tabular-nums pt-3 border-t border-slate-200 dark:border-white/10">
+                    <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed mb-5 flex-1">{desc}</p>
+                    <p className="text-lg font-bold text-amber-700 dark:text-amber-300 tabular-nums pt-3 border-t border-slate-200 dark:border-white/10">
                       {impact}
                     </p>
                   </div>
@@ -677,13 +677,13 @@ export default function HomePage() {
                   transition={{ duration: 0.42, delay: idx * 0.06, ease: EASE_SERENE }}
                   className="rounded-xl p-6 bg-slate-50 dark:bg-[#111C33] border border-slate-200 dark:border-white/10 flex flex-col"
                 >
-                  <p className="text-xs text-amber-700 dark:text-amber-400 font-medium mb-1">
+                  <p className="text-xs text-amber-700 dark:text-amber-300 font-medium mb-1">
                     {lang === 'ta' ? fund.english : fund.tamil}
                   </p>
                   <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{title}</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5 flex-1">{desc}</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed mb-5 flex-1">{desc}</p>
                   <div className="pt-4 border-t border-slate-200 dark:border-white/10 mb-5">
-                    <p className="text-xs text-slate-500 dark:text-slate-400">
+                    <p className="text-xs text-slate-500 dark:text-slate-300">
                       {tr(lang, 'Goal Target', 'இலக்கு')}
                     </p>
                     <p className="text-base font-bold text-slate-900 dark:text-white tabular-nums mt-0.5">
@@ -785,10 +785,10 @@ export default function HomePage() {
                 <p className="text-lg sm:text-xl leading-relaxed text-slate-800 dark:text-slate-100 mb-6">
                   “{tr(lang, currentTestimonial.quote, TESTIMONIALS_TA[currentTestimonial.id]?.quote ?? currentTestimonial.quote)}”
                 </p>
-                <p className="text-base font-semibold text-amber-700 dark:text-amber-400">
+                <p className="text-base font-semibold text-amber-700 dark:text-amber-300">
                   {currentTestimonial.name}
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                <p className="text-xs text-slate-500 dark:text-slate-300 mt-0.5">
                   {tr(lang, currentTestimonial.role, TESTIMONIALS_TA[currentTestimonial.id]?.role ?? currentTestimonial.role)}
                 </p>
               </motion.div>
@@ -799,18 +799,18 @@ export default function HomePage() {
                 type="button"
                 onClick={() => setTestimonialIdx((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)}
                 aria-label={tr(lang, 'Previous testimonial', 'முந்தைய அனுபவம்')}
-                className="w-10 h-10 rounded-lg border border-slate-300 dark:border-slate-700 inline-flex items-center justify-center hover:bg-slate-200/70 dark:hover:bg-slate-800 transition-colors"
+                className="w-10 h-10 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 inline-flex items-center justify-center hover:bg-slate-200/70 dark:hover:bg-slate-800 transition-colors"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              <span className="text-xs text-slate-500 dark:text-slate-400 tabular-nums px-2">
+              <span className="text-xs text-slate-500 dark:text-slate-300 tabular-nums px-2">
                 {testimonialIdx + 1} / {TESTIMONIALS.length}
               </span>
               <button
                 type="button"
                 onClick={() => setTestimonialIdx((i) => (i + 1) % TESTIMONIALS.length)}
                 aria-label={tr(lang, 'Next testimonial', 'அடுத்த அனுபவம்')}
-                className="w-10 h-10 rounded-lg border border-slate-300 dark:border-slate-700 inline-flex items-center justify-center hover:bg-slate-200/70 dark:hover:bg-slate-800 transition-colors"
+                className="w-10 h-10 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 inline-flex items-center justify-center hover:bg-slate-200/70 dark:hover:bg-slate-800 transition-colors"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>

@@ -83,7 +83,7 @@ export default function CartDrawer() {
               setStatus('idle');
             }}
             aria-label="Close cart"
-            className="w-9 h-9 rounded-lg inline-flex items-center justify-center text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
+            className="w-9 h-9 rounded-lg inline-flex items-center justify-center text-slate-500 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -115,10 +115,10 @@ export default function CartDrawer() {
             </div>
           ) : cart.length === 0 ? (
             <div className="py-16 text-center space-y-2">
-              <p className="text-base font-medium text-slate-700 dark:text-slate-300">
+              <p className="text-base font-medium text-slate-700 dark:text-slate-200">
                 {tr(lang, 'Your cart is currently empty', 'உங்கள் கூடை தற்போது காலியாக உள்ளது')}
               </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm text-slate-500 dark:text-slate-300">
                 {tr(
                   lang,
                   'Explore herbal chooranam, spiritual books, sacred brass diyas, and pure forest honey.',
@@ -166,7 +166,7 @@ export default function CartDrawer() {
                             type="button"
                             onClick={() => removeFromCart(item.id)}
                             aria-label={`Remove ${localizedName}`}
-                            className="ml-auto text-slate-400 hover:text-rose-600 transition-colors p-1"
+                            className="ml-auto text-slate-500 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 transition-colors p-1"
                           >
                             <Trash2 className="w-4 h-4" />
                           </button>
@@ -178,7 +178,7 @@ export default function CartDrawer() {
               </ul>
 
               <div className="pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
-                <span className="text-sm font-medium text-slate-600 dark:text-slate-300">
+                <span className="text-sm font-medium text-slate-600 dark:text-slate-200">
                   {tr(lang, 'Order Subtotal', 'மொத்தத் தொகை')}
                 </span>
                 <span className="text-xl font-bold tabular-nums">₹{cartTotal}</span>
@@ -193,7 +193,7 @@ export default function CartDrawer() {
                   type="text"
                   required
                   placeholder={tr(lang, 'Full Name *', 'முழு பெயர் *')}
-                  className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                 />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <input
@@ -201,14 +201,14 @@ export default function CartDrawer() {
                     type="tel"
                     required
                     placeholder={tr(lang, 'Mobile / WhatsApp *', 'மொபைல் / WhatsApp *')}
-                    className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                   />
                   <input
                     name="email"
                     type="email"
                     required
                     placeholder={tr(lang, 'Email Address *', 'மின்னஞ்சல் *')}
-                    className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                   />
                 </div>
                 <textarea
@@ -216,7 +216,7 @@ export default function CartDrawer() {
                   rows={2}
                   required
                   placeholder={tr(lang, 'Delivery Address & Pincode *', 'விநியோக முகவரி & அஞ்சல் குறியீடு *')}
-                  className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-3.5 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                 />
                 {status === 'error' && (
                   <p className="text-xs font-medium text-rose-600 dark:text-rose-400">{errorMsg}</p>

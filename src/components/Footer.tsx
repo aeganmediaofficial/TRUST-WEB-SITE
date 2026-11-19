@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Download, Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { SITE_INFO } from '../data/aadheenamData';
 import { useSite } from '../context/SiteContext';
 import { NAV_LABELS, tr } from '../data/translations';
@@ -10,7 +10,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-100 dark:bg-[#0B1324] text-slate-700 dark:text-slate-200 border-t border-slate-200 dark:border-white/10 transition-colors duration-200">
+    <footer className="bg-slate-100 dark:bg-[#0B1324] text-slate-700 dark:text-slate-100 border-t border-slate-200 dark:border-white/10 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand Column */}
@@ -29,14 +29,14 @@ export default function Footer() {
             >
               <span>{tr(lang, NAV_LABELS.brand.en, NAV_LABELS.brand.ta)}</span>
             </Link>
-            <p className="text-sm text-amber-700 dark:text-amber-300/95 leading-relaxed mb-3" style={{ fontFamily: 'var(--font-tamil)' }}>
+            <p className="text-sm text-amber-700 dark:text-amber-300 leading-relaxed mb-3" style={{ fontFamily: 'var(--font-tamil)' }}>
               {tr(
                 lang,
                 `${SITE_INFO.taglineTamil} — ${SITE_INFO.taglineEnglish}.`,
                 `${SITE_INFO.taglineTamil} — ஆன்மீகம், இயற்கை, மனிதநேயம்.`
               )}
             </p>
-            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-5">
+            <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-5">
               {tr(
                 lang,
                 'A sacred institution rooted in Tamil Siddhar tradition, serving humanity through spiritual wisdom and compassionate action.',
@@ -44,18 +44,18 @@ export default function Footer() {
               )}
             </p>
             <div>
-              <p className="text-xs font-semibold text-amber-700 dark:text-amber-400 mb-2.5">
+              <p className="text-xs font-semibold text-amber-700 dark:text-amber-300 mb-2.5">
                 {tr(lang, 'Join Our Community', 'நமது சமூகத்துடன் இணைய')}
               </p>
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-3">
                 <a
                   href={SITE_INFO.social.facebookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={tr(lang, 'Pulipani Siddhar Aadheenam on Facebook', 'புலிப்பாணி சித்தர் ஆதீனம் — Facebook')}
-                  className="w-9 h-9 rounded-lg inline-flex items-center justify-center bg-white dark:bg-white/10 border border-slate-200 dark:border-white/15 text-slate-700 dark:text-slate-200 hover:border-amber-500 hover:text-amber-700 dark:hover:border-amber-400 dark:hover:text-amber-400 transition-colors"
+                  className="w-10 h-10 rounded-lg inline-flex items-center justify-center bg-white dark:bg-[#17233B] border border-slate-300 dark:border-slate-500 text-[#1877F2] dark:text-[#60A5FA] hover:border-[#1877F2] dark:hover:border-[#60A5FA] hover:bg-slate-50 dark:hover:bg-[#223354] shadow-sm transition-colors"
                 >
-                  <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor" aria-hidden="true">
                     <path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.6c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V22h3.4z" />
                   </svg>
                 </a>
@@ -64,9 +64,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={tr(lang, 'Pulipani Siddhar Aadheenam on Instagram', 'புலிப்பாணி சித்தர் ஆதீனம் — Instagram')}
-                  className="w-9 h-9 rounded-lg inline-flex items-center justify-center bg-white dark:bg-white/10 border border-slate-200 dark:border-white/15 text-slate-700 dark:text-slate-200 hover:border-amber-500 hover:text-amber-700 dark:hover:border-amber-400 dark:hover:text-amber-400 transition-colors"
+                  className="w-10 h-10 rounded-lg inline-flex items-center justify-center bg-white dark:bg-[#17233B] border border-slate-300 dark:border-slate-500 text-[#D62976] dark:text-[#F472B6] hover:border-[#D62976] dark:hover:border-[#F472B6] hover:bg-slate-50 dark:hover:bg-[#223354] shadow-sm transition-colors"
                 >
-                  <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -77,9 +77,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={tr(lang, 'Pulipani Siddhar Aadheenam on YouTube', 'புலிப்பாணி சித்தர் ஆதீனம் — YouTube')}
-                  className="w-9 h-9 rounded-lg inline-flex items-center justify-center bg-white dark:bg-white/10 border border-slate-200 dark:border-white/15 text-slate-700 dark:text-slate-200 hover:border-amber-500 hover:text-amber-700 dark:hover:border-amber-400 dark:hover:text-amber-400 transition-colors"
+                  className="w-10 h-10 rounded-lg inline-flex items-center justify-center bg-white dark:bg-[#17233B] border border-slate-300 dark:border-slate-500 text-[#FF0000] dark:text-[#F87171] hover:border-[#FF0000] dark:hover:border-[#F87171] hover:bg-slate-50 dark:hover:bg-[#223354] shadow-sm transition-colors"
                 >
-                  <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor" aria-hidden="true">
                     <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z" />
                   </svg>
                 </a>
@@ -92,7 +92,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-slate-900 dark:text-white pb-2.5 mb-4 border-b border-slate-200 dark:border-white/10">
               {tr(lang, 'Quick Links', 'விரைவு இணைப்புகள்')}
             </h3>
-            <nav className="flex flex-col gap-2.5 text-sm text-slate-600 dark:text-slate-300" aria-label="Footer quick links">
+            <nav className="flex flex-col gap-2.5 text-sm text-slate-600 dark:text-slate-200" aria-label="Footer quick links">
               {[
                 { href: '/', label: tr(lang, 'Home', 'முகப்பு') },
                 { href: '/about', label: tr(lang, 'About Aadheenam', 'ஆதீனம் பற்றி') },
@@ -102,7 +102,7 @@ export default function Footer() {
                 { href: '/gallery', label: tr(lang, 'Photo Gallery', 'படங்கள் தொகுப்பு') },
                 { href: '/volunteer', label: tr(lang, 'Volunteer', 'தன்னார்வ சேவை') },
               ].map((item) => (
-                <Link key={item.href} to={item.href} className="hover:text-amber-700 dark:hover:text-amber-400 transition-colors w-fit">
+                <Link key={item.href} to={item.href} className="hover:text-amber-700 dark:hover:text-amber-300 transition-colors w-fit">
                   {item.label}
                 </Link>
               ))}
@@ -114,7 +114,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-slate-900 dark:text-white pb-2.5 mb-4 border-b border-slate-200 dark:border-white/10">
               {tr(lang, 'Our Mission', 'எங்கள் நோக்கம்')}
             </h3>
-            <nav className="flex flex-col gap-2.5 text-sm text-slate-600 dark:text-slate-300" aria-label="Footer mission links">
+            <nav className="flex flex-col gap-2.5 text-sm text-slate-600 dark:text-slate-200" aria-label="Footer mission links">
               {[
                 { href: '/classes', label: tr(lang, 'Yoga & Meditation', 'யோகா & தியானம்') },
                 { href: '/classes', label: tr(lang, 'Natural Living Training', 'இயற்கை வாழ்வியல் பயிற்சி') },
@@ -125,7 +125,7 @@ export default function Footer() {
                 { href: '/donate', label: tr(lang, 'Donate Now', 'நன்கொடை அளிக்க') },
                 { href: '/admin/registrations', label: tr(lang, 'Registrations Portal', 'பதிவு நிர்வாகப் பலகை') },
               ].map((item, i) => (
-                <Link key={i} to={item.href} className="hover:text-amber-700 dark:hover:text-amber-400 transition-colors w-fit">
+                <Link key={i} to={item.href} className="hover:text-amber-700 dark:hover:text-amber-300 transition-colors w-fit">
                   {item.label}
                 </Link>
               ))}
@@ -139,29 +139,29 @@ export default function Footer() {
             </h3>
             <div className="space-y-4 text-sm">
               <div>
-                <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-1">{tr(lang, 'Address', 'முகவரி')}</p>
-                <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-1">{tr(lang, 'Address', 'முகவரி')}</p>
+                <p className="text-slate-600 dark:text-slate-200 leading-relaxed">
                   <span style={{ fontFamily: 'var(--font-tamil)' }}>{SITE_INFO.addressTamil}</span>
                   <br />
                   {tr(lang, SITE_INFO.addressEnglish, 'மல்லன்குழி, தாளவாடி, தமிழ்நாடு, இந்தியா')}
                 </p>
               </div>
               <div>
-                <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-1">
+                <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-1">
                   {tr(lang, 'Phone / WhatsApp', 'தொலைபேசி / WhatsApp')}
                 </p>
                 <a
                   href={SITE_INFO.phoneHref}
-                  className="font-semibold text-slate-900 dark:text-white hover:text-amber-700 dark:hover:text-amber-400 transition-colors tabular-nums"
+                  className="font-semibold text-slate-900 dark:text-white hover:text-amber-700 dark:hover:text-amber-300 transition-colors tabular-nums"
                 >
                   {SITE_INFO.phoneDisplay}
                 </a>
               </div>
               <div>
-                <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-1">{tr(lang, 'Email', 'மின்னஞ்சல்')}</p>
+                <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-1">{tr(lang, 'Email', 'மின்னஞ்சல்')}</p>
                 <a
                   href={`mailto:${SITE_INFO.email}`}
-                  className="text-slate-600 dark:text-slate-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
+                  className="text-slate-600 dark:text-slate-200 hover:text-amber-700 dark:hover:text-amber-300 transition-colors"
                 >
                   {SITE_INFO.email}
                 </a>
@@ -171,7 +171,7 @@ export default function Footer() {
                   href={SITE_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 dark:bg-white/10 dark:hover:bg-white/15 text-xs font-medium transition-colors"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 dark:bg-[#17233B] dark:border dark:border-slate-500 dark:text-slate-100 dark:hover:bg-[#223354] text-xs font-medium transition-colors"
                 >
                   {tr(lang, 'WhatsApp Enquiry', 'WhatsApp விசாரணை')}
                 </a>
@@ -182,7 +182,7 @@ export default function Footer() {
 
         {/* Quiet Bottom Bar */}
         <div className="mt-12 pt-6 border-t border-slate-200 dark:border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-slate-500 dark:text-slate-400 text-center sm:text-left">
+          <p className="text-xs text-slate-500 dark:text-slate-300 text-center sm:text-left">
             © {currentYear} {tr(lang, SITE_INFO.name, SITE_INFO.tamilName)}.{' '}
             {tr(lang, 'All rights reserved.', 'அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.')}
           </p>
@@ -190,7 +190,7 @@ export default function Footer() {
             <div
               role="group"
               aria-label={tr(lang, 'Theme switch', 'தீம் மாற்றம்')}
-              className="inline-flex items-center p-0.5 rounded-lg bg-white dark:bg-white/10 border border-slate-200 dark:border-white/15"
+              className="inline-flex items-center p-0.5 rounded-lg bg-white dark:bg-[#17233B] border border-slate-300 dark:border-slate-500 shadow-sm"
             >
               <button
                 type="button"
@@ -198,8 +198,8 @@ export default function Footer() {
                 aria-pressed={theme === 'light'}
                 className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold transition-colors whitespace-nowrap ${
                   theme === 'light'
-                    ? 'bg-amber-500 text-slate-950'
-                    : 'text-slate-600 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white'
+                    ? 'bg-amber-500 text-slate-950 shadow-xs'
+                    : 'text-slate-700 hover:text-slate-950 hover:bg-slate-100 dark:text-slate-100 dark:hover:text-white dark:hover:bg-[#223354]'
                 }`}
               >
                 <Sun className="w-3.5 h-3.5" aria-hidden="true" />
@@ -211,8 +211,8 @@ export default function Footer() {
                 aria-pressed={theme === 'dark'}
                 className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold transition-colors whitespace-nowrap ${
                   theme === 'dark'
-                    ? 'bg-amber-500 text-slate-950'
-                    : 'text-slate-600 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white'
+                    ? 'bg-amber-500 text-slate-950 shadow-xs'
+                    : 'text-slate-700 hover:text-slate-950 hover:bg-slate-100 dark:text-slate-100 dark:hover:text-white dark:hover:bg-[#223354]'
                 }`}
               >
                 <Moon className="w-3.5 h-3.5" aria-hidden="true" />
@@ -220,18 +220,10 @@ export default function Footer() {
               </button>
             </div>
             <PWAInstallButton />
-            <a
-              href="./pulipani-siddhar-aadheenam.html?download=1"
-              download="pulipani-siddhar-aadheenam.html"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-white/15 bg-white dark:bg-white/10 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:border-amber-500 hover:text-amber-700 dark:hover:border-amber-400 dark:hover:text-amber-400 transition-colors whitespace-nowrap shrink-0"
-            >
-              <Download className="w-3.5 h-3.5" aria-hidden="true" />
-              <span>{tr(lang, 'Download HTML', 'HTML பதிவிறக்கம்')}</span>
-            </a>
-            <Link to="/privacy" className="text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+            <Link to="/privacy" className="text-xs text-slate-500 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
               {tr(lang, 'Privacy Policy', 'தனியுரிமைக் கொள்கை')}
             </Link>
-            <Link to="/terms" className="text-xs text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+            <Link to="/terms" className="text-xs text-slate-500 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
               {tr(lang, 'Terms of Use', 'பயன்பாட்டு விதிமுறைகள்')}
             </Link>
           </div>

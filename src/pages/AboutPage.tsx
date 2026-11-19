@@ -41,7 +41,7 @@ export default function AboutPage() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <p className="text-base font-medium text-amber-700 dark:text-amber-400 mb-1">
+              <p className="text-base font-medium text-amber-700 dark:text-amber-300 mb-1">
                 {tr(lang, 'எங்கள் பாரம்பரியம்', 'Lineage & History')}
               </p>
               <h2
@@ -51,7 +51,7 @@ export default function AboutPage() {
                 {tr(lang, 'Lineage & History', ABOUT_TA.lineageHeading)}
               </h2>
               <KolamRule centered={false} />
-              <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
+              <p className="text-base text-slate-600 dark:text-slate-200 leading-relaxed mb-8">
                 {tr(
                   lang,
                   'Pulipani Siddhar Aadheenam is a sacred institution established in the lineage of Pulipani Siddhar — one of the revered 18 Tamil Siddhars. For over 18 years, we have been a beacon of spiritual wisdom, natural living, and compassionate service in Tamil Nadu. Our mission is to guide seekers on the path of inner awakening while serving society through education, healthcare, and humanitarian initiatives.',
@@ -62,8 +62,8 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-xl bg-slate-50 dark:bg-[#10192D] border border-slate-200 dark:border-white/10">
                 {STATS.map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <p className="text-2xl font-bold text-amber-700 dark:text-amber-400 tabular-nums">{stat.num}</p>
-                    <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">
+                    <p className="text-2xl font-bold text-amber-700 dark:text-amber-300 tabular-nums">{stat.num}</p>
+                    <p className="text-xs text-slate-600 dark:text-slate-200 mt-1">
                       {tr(lang, stat.label, STATS_TA[stat.label] ?? stat.tamil)}
                     </p>
                   </div>
@@ -85,11 +85,11 @@ export default function AboutPage() {
                 key={item.label}
                 className="rounded-xl p-7 bg-white dark:bg-[#111C33] border border-slate-200 dark:border-white/10"
               >
-                <p className="text-base font-semibold text-amber-700 dark:text-amber-400 mb-3">{item.label}</p>
-                <p className="text-sm text-slate-800 dark:text-slate-200 leading-relaxed mb-3" style={{ fontFamily: 'var(--font-tamil)' }}>
+                <p className="text-base font-semibold text-amber-700 dark:text-amber-300 mb-3">{item.label}</p>
+                <p className="text-sm text-slate-800 dark:text-slate-100 leading-relaxed mb-3" style={{ fontFamily: 'var(--font-tamil)' }}>
                   {item.tamil}
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{item.english}</p>
+                <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed">{item.english}</p>
               </div>
             ))}
           </div>
@@ -102,14 +102,14 @@ export default function AboutPage() {
                   key={pillar.english}
                   className="rounded-xl p-6 bg-white dark:bg-[#111C33] border border-slate-200 dark:border-white/10"
                 >
-                  <p className="text-xs text-slate-500 dark:text-slate-400 tabular-nums mb-3">0{idx + 1}</p>
-                  <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-0.5">
+                  <p className="text-xs text-slate-500 dark:text-slate-300 tabular-nums mb-3">0{idx + 1}</p>
+                  <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-0.5">
                     {lang === 'ta' ? pillar.english : pillar.tamil}
                   </p>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2.5">
                     {tr(lang, pillar.english, taPillar.title)}
                   </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed">
                     {tr(lang, pillar.desc, taPillar.desc)}
                   </p>
                 </div>
@@ -124,7 +124,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
             <div className="flex flex-col justify-center">
-              <p className="text-base font-medium text-amber-700 dark:text-amber-400 mb-1">
+              <p className="text-base font-medium text-amber-700 dark:text-amber-300 mb-1">
                 {tr(lang, 'ஆன்மீக தத்துவம்', 'Spiritual Philosophy')}
               </p>
               <h2
@@ -134,21 +134,21 @@ export default function AboutPage() {
                 {tr(lang, 'Spiritual Philosophy', ABOUT_TA.philosophyTitle)}
               </h2>
               <KolamRule centered={false} />
-              <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+              <p className="text-base text-slate-600 dark:text-slate-200 leading-relaxed mb-4">
                 {tr(
                   lang,
                   'The Tamil Siddhar tradition is one of the world’s oldest and most profound spiritual lineages. The Siddhars were enlightened masters who attained liberation through the practice of yoga, meditation, and deep inquiry into the nature of the self. Their teachings — preserved in Tamil Siddhar literature — offer a complete path to physical health, mental clarity, and spiritual liberation.',
                   ABOUT_TA.philosophyBody1
                 )}
               </p>
-              <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+              <p className="text-base text-slate-600 dark:text-slate-200 leading-relaxed mb-4">
                 {tr(
                   lang,
                   'Pulipani Siddhar is revered among the 18 Siddhars for his timeless teachings on yoga, herbal medicine, and inner awakening.',
                   ABOUT_TA.philosophyBody2
                 )}
               </p>
-              <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-base text-slate-600 dark:text-slate-200 leading-relaxed">
                 {tr(
                   lang,
                   'At Pulipani Siddhar Aadheenam, we transmit these teachings in their authentic form — not as mere philosophy, but as a living, practical path that transforms the body, mind, and spirit. Our programmes are designed to make Siddhar wisdom accessible to all, regardless of background or prior experience.',
@@ -185,14 +185,14 @@ export default function AboutPage() {
                     <SmartImage src={item.image} alt={tr(lang, item.english, taAct.title)} className="w-full aspect-video object-cover" />
                   </div>
                   <div className={idx % 2 === 1 ? 'md:order-1' : ''}>
-                    <p className="text-base font-medium text-amber-700 dark:text-amber-400 mb-1">
+                    <p className="text-base font-medium text-amber-700 dark:text-amber-300 mb-1">
                       {lang === 'ta' ? item.english : item.tamil}
                     </p>
                     <h3 className="text-2xl sm:text-3xl font-semibold text-slate-900 dark:text-white mb-2">
                       {tr(lang, item.english, taAct.title)}
                     </h3>
                     <KolamRule centered={false} />
-                    <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <p className="text-base text-slate-600 dark:text-slate-200 leading-relaxed">
                       {tr(lang, item.desc, taAct.desc)}
                     </p>
                   </div>
@@ -213,14 +213,14 @@ export default function AboutPage() {
               const taLeader = ABOUT_TA.leadership[idx];
               return (
                 <div key={leader.name} className="rounded-xl p-7 bg-white dark:bg-[#111C33] border border-slate-200 dark:border-white/10 flex flex-col">
-                  <p className="text-xs text-slate-500 dark:text-slate-400 tabular-nums mb-3">0{idx + 1}</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-300 tabular-nums mb-3">0{idx + 1}</p>
                   <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-1">
                     {tr(lang, leader.name, taLeader.name)}
                   </h3>
-                  <p className="text-sm font-medium text-amber-700 dark:text-amber-400 mb-4">
+                  <p className="text-sm font-medium text-amber-700 dark:text-amber-300 mb-4">
                     {tr(lang, leader.role, taLeader.role)}
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed flex-1">
+                  <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed flex-1">
                     {tr(lang, leader.desc, taLeader.desc)}
                   </p>
                 </div>
@@ -233,7 +233,7 @@ export default function AboutPage() {
       {/* ── JOIN OUR SPIRITUAL FAMILY CTA ───────────────────────────────────── */}
       <section className="py-20 sm:py-24 bg-white dark:bg-[#070D19] text-center">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg font-medium text-amber-700 dark:text-amber-400 mb-2">
+          <p className="text-lg font-medium text-amber-700 dark:text-amber-300 mb-2">
             {tr(lang, 'ஒன்றிணைவோம்', 'Join Us')}
           </p>
           <h2
@@ -242,7 +242,7 @@ export default function AboutPage() {
           >
             {tr(lang, 'Join Our Spiritual Family', ABOUT_TA.ctaHeading)}
           </h2>
-          <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
+          <p className="text-base text-slate-600 dark:text-slate-200 leading-relaxed mb-8">
             {tr(
               lang,
               'Whether you seek spiritual growth, wish to learn natural living, want to serve the community, or simply want to connect with like-minded souls — Pulipani Siddhar Aadheenam welcomes you with open arms.',
@@ -258,7 +258,7 @@ export default function AboutPage() {
             </Link>
             <Link
               to="/events"
-              className="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               {tr(lang, 'Upcoming Events', 'வரவிருக்கும் நிகழ்வுகள்')}
             </Link>

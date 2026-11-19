@@ -468,21 +468,6 @@ async function startServer() {
     res.json({ ok: true });
   });
 
-  // ── Standalone HTML Export Route ───────────────────────────────────────────
-  app.get('/pulipani-siddhar-aadheenam.html', (req, res) => {
-    const standalonePath = path.resolve(__dirname, 'public', 'pulipani-siddhar-aadheenam.html');
-    res.setHeader('Content-Type', 'text/html; charset=utf-8');
-    if (req.query.download === '1') {
-      res.setHeader('Content-Disposition', 'attachment; filename="pulipani-siddhar-aadheenam.html"');
-    }
-    res.sendFile(standalonePath);
-  });
-
-  app.get('/download/pulipani-siddhar-aadheenam.html', (_req, res) => {
-    const standalonePath = path.resolve(__dirname, 'public', 'pulipani-siddhar-aadheenam.html');
-    res.download(standalonePath, 'pulipani-siddhar-aadheenam.html');
-  });
-
   // ── Vite Middleware (Dev) or Static Assets (Prod) ─────────────────────────
   const isProd = process.env.NODE_ENV === 'production';
   if (!isProd) {

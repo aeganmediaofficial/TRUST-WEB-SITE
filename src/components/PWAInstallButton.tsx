@@ -94,12 +94,12 @@ export function PWAInstallButton() {
                 type="button"
                 onClick={() => setShowIOSModal(false)}
                 aria-label={tr(lang, 'Close', 'மூடு')}
-                className="p-1 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white"
+                className="p-1 rounded-lg text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-4">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-200 mb-4">
               {tr(
                 lang,
                 'Add Pulipani Siddhar Aadheenam to your iPhone or iPad Home Screen for quick offline access:',

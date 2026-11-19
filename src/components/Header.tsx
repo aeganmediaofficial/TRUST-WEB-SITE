@@ -60,8 +60,8 @@ export default function Header() {
                   to={item.href}
                   className={`relative py-1 text-sm font-medium transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-sm ${
                     active
-                      ? 'text-amber-700 dark:text-amber-400'
-                      : 'text-slate-600 hover:text-slate-950 dark:text-slate-200 dark:hover:text-white'
+                      ? 'text-amber-700 dark:text-amber-300'
+                      : 'text-slate-600 hover:text-slate-950 dark:text-slate-100 dark:hover:text-amber-300'
                   }`}
                 >
                   {item.label}
@@ -82,7 +82,7 @@ export default function Header() {
             <div
               role="group"
               aria-label={tr(lang, 'Theme switch', 'தீம் மாற்றம்')}
-              className="inline-flex items-center p-0.5 rounded-lg bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/15 shrink-0"
+              className="inline-flex items-center p-0.5 rounded-lg bg-slate-100 dark:bg-[#17233B] border border-slate-300 dark:border-slate-500 shrink-0"
             >
               <button
                 type="button"
@@ -93,7 +93,7 @@ export default function Header() {
                 className={`inline-flex items-center justify-center gap-1 px-2 py-1 text-xs font-semibold rounded-md transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                   theme === 'light'
                     ? 'bg-amber-500 text-slate-950'
-                    : 'text-slate-600 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white'
+                    : 'text-slate-700 hover:text-slate-950 dark:text-slate-100 dark:hover:text-white dark:hover:bg-[#223354]'
                 }`}
               >
                 <Sun className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
@@ -108,7 +108,7 @@ export default function Header() {
                 className={`inline-flex items-center justify-center gap-1 px-2 py-1 text-xs font-semibold rounded-md transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                   theme === 'dark'
                     ? 'bg-amber-500 text-slate-950'
-                    : 'text-slate-600 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white'
+                    : 'text-slate-700 hover:text-slate-950 dark:text-slate-100 dark:hover:text-white dark:hover:bg-[#223354]'
                 }`}
               >
                 <Moon className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
@@ -120,9 +120,9 @@ export default function Header() {
             <div
               role="group"
               aria-label="Language switch"
-              className="inline-flex items-center p-0.5 rounded-lg bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/15 shrink-0"
+              className="inline-flex items-center p-0.5 rounded-lg bg-slate-100 dark:bg-[#17233B] border border-slate-300 dark:border-slate-500 shrink-0"
             >
-              <Globe className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 ml-1.5 mr-1 hidden sm:block shrink-0" aria-hidden="true" />
+              <Globe className="w-3.5 h-3.5 text-amber-600 dark:text-amber-300 ml-1.5 mr-1 hidden sm:block shrink-0" aria-hidden="true" />
               <button
                 type="button"
                 onClick={() => setLang('en')}
@@ -130,7 +130,7 @@ export default function Header() {
                 className={`px-2 py-1 text-xs font-semibold rounded-md transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                   lang === 'en'
                     ? 'bg-amber-500 text-slate-950'
-                    : 'text-slate-600 hover:text-slate-950 dark:text-slate-200 dark:hover:text-white'
+                    : 'text-slate-700 hover:text-slate-950 dark:text-slate-100 dark:hover:text-white dark:hover:bg-[#223354]'
                 }`}
               >
                 EN
@@ -142,7 +142,7 @@ export default function Header() {
                 className={`px-2 py-1 text-xs font-semibold rounded-md transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                   lang === 'ta'
                     ? 'bg-amber-500 text-slate-950'
-                    : 'text-slate-600 hover:text-slate-950 dark:text-slate-200 dark:hover:text-white'
+                    : 'text-slate-700 hover:text-slate-950 dark:text-slate-100 dark:hover:text-white dark:hover:bg-[#223354]'
                 }`}
                 style={{ fontFamily: 'var(--font-tamil)' }}
               >
@@ -183,8 +183,8 @@ export default function Header() {
                   onClick={() => setMobileOpen(false)}
                   className={`px-3 py-2.5 rounded-lg text-sm font-medium transition-colors min-h-[44px] flex items-center ${
                     active
-                      ? 'bg-amber-500/15 text-amber-700 dark:text-amber-400'
-                      : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-950 dark:hover:text-white'
+                      ? 'bg-amber-500/15 text-amber-700 dark:text-amber-300'
+                      : 'text-slate-700 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-950 dark:hover:text-white'
                   }`}
                 >
                   {item.label}
@@ -194,17 +194,17 @@ export default function Header() {
 
             {/* Mobile Theme Row */}
             <div className="col-span-2 mt-2 pt-3 border-t border-slate-200 dark:border-white/10 flex items-center justify-between gap-3">
-              <span className="text-xs font-medium text-slate-600 dark:text-slate-300">
+              <span className="text-xs font-medium text-slate-600 dark:text-slate-200">
                 {tr(lang, 'Appearance', 'தோற்றம்')}
               </span>
-              <div className="inline-flex items-center p-0.5 rounded-lg bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/15">
+              <div className="inline-flex items-center p-0.5 rounded-lg bg-slate-100 dark:bg-[#17233B] border border-slate-300 dark:border-slate-500">
                 <button
                   type="button"
                   onClick={() => setTheme('light')}
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-colors ${
                     theme === 'light'
                       ? 'bg-amber-500 text-slate-950'
-                      : 'text-slate-600 dark:text-slate-300'
+                      : 'text-slate-700 dark:text-slate-100'
                   }`}
                 >
                   <Sun className="w-3.5 h-3.5" />
@@ -216,7 +216,7 @@ export default function Header() {
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-colors ${
                     theme === 'dark'
                       ? 'bg-amber-500 text-slate-950'
-                      : 'text-slate-600 dark:text-slate-300'
+                      : 'text-slate-700 dark:text-slate-100'
                   }`}
                 >
                   <Moon className="w-3.5 h-3.5" />

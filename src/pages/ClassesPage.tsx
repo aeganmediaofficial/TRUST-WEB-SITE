@@ -120,10 +120,10 @@ export default function ClassesPage() {
             { num: tr(lang, 'Tamil', 'தமிழ்'), label: tr(lang, 'Medium of Instruction', 'பயிற்று மொழி') },
           ].map((s) => (
             <div key={s.label}>
-              <p className="text-xl sm:text-2xl font-bold text-amber-700 dark:text-amber-400 tabular-nums">
+              <p className="text-xl sm:text-2xl font-bold text-amber-700 dark:text-amber-300 tabular-nums">
                 {s.num}
               </p>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">{s.label}</p>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-200 mt-1">{s.label}</p>
             </div>
           ))}
         </div>
@@ -160,7 +160,7 @@ export default function ClassesPage() {
                   className={`px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors whitespace-nowrap ${
                     filter === tab.id
                       ? 'bg-white dark:bg-amber-500 text-slate-950 shadow-sm'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
+                      : 'text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
                   {tab.label}
@@ -191,28 +191,28 @@ export default function ClassesPage() {
                   </div>
 
                   <div className="p-6 flex-1 flex flex-col">
-                    <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 tabular-nums mb-2">
-                      <span className="font-semibold text-amber-700 dark:text-amber-400">{tag}</span>
+                    <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-300 tabular-nums mb-2">
+                      <span className="font-semibold text-amber-700 dark:text-amber-300">{tag}</span>
                       <span aria-hidden="true">·</span>
                       <span>{formats}</span>
                       <span aria-hidden="true">·</span>
                       <span>{duration}</span>
                     </div>
 
-                    <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-0.5">
+                    <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-0.5">
                       {lang === 'ta' ? course.english : course.tamil}
                     </p>
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
                       {title}
                     </h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                    <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed mb-4">
                       {desc}
                     </p>
 
                     <ul className="space-y-1.5 mb-6 flex-1">
                       {highlights.map((h) => (
-                        <li key={h} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-                          <Check className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                        <li key={h} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200">
+                          <Check className="w-4 h-4 text-amber-600 dark:text-amber-300 shrink-0 mt-0.5" />
                           <span>{h}</span>
                         </li>
                       ))}
@@ -220,7 +220,7 @@ export default function ClassesPage() {
 
                     <div className="pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between gap-4">
                       <div>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">{sessions}</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-300">{sessions}</p>
                         <p className="text-base font-bold text-slate-900 dark:text-white tabular-nums">{fee}</p>
                       </div>
                       <button
@@ -258,13 +258,13 @@ export default function ClassesPage() {
                 <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 inline-flex items-center justify-center mx-auto">
                   <Check className="w-7 h-7" />
                 </div>
-                <p className="text-2xl font-semibold text-amber-700 dark:text-amber-400" style={{ fontFamily: 'var(--font-tamil)' }}>
+                <p className="text-2xl font-semibold text-amber-700 dark:text-amber-300" style={{ fontFamily: 'var(--font-tamil)' }}>
                   பதிவு வெற்றிகரமாக முடிந்தது!
                 </p>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                   {tr(lang, 'Registration Successful!', 'உங்கள் பதிவு வெற்றிகரமாகப் பெறப்பட்டது!')}
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+                <p className="text-sm text-slate-600 dark:text-slate-200 max-w-md mx-auto leading-relaxed">
                   {tr(
                     lang,
                     'Thank you for registering. Our team will contact you on your WhatsApp / mobile number within 24 hours to confirm your batch details.',
@@ -309,7 +309,7 @@ export default function ClassesPage() {
                       type="text"
                       required
                       placeholder={tr(lang, 'Your full name', 'உங்கள் பெயர்')}
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
 
@@ -325,7 +325,7 @@ export default function ClassesPage() {
                       max={100}
                       required
                       placeholder={tr(lang, 'Your age', 'உங்கள் வயது')}
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
 
@@ -339,7 +339,7 @@ export default function ClassesPage() {
                       type="tel"
                       required
                       placeholder="+91 XXXXX XXXXX"
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
 
@@ -353,7 +353,7 @@ export default function ClassesPage() {
                       type="tel"
                       required
                       placeholder="+91 XXXXX XXXXX"
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
 
@@ -367,7 +367,7 @@ export default function ClassesPage() {
                       type="email"
                       required
                       placeholder="your@email.com"
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
 
@@ -450,7 +450,7 @@ export default function ClassesPage() {
                       name="notes"
                       rows={3}
                       placeholder={tr(lang, 'Any questions or special requirements...', 'உங்கள் கேள்விகள் அல்லது சிறப்புத் தேவைகள்...')}
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                 </div>
@@ -507,13 +507,13 @@ export default function ClassesPage() {
                       {tr(lang, faq.q, taFaq?.q ?? faq.q)}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200 ${
-                        isOpen ? 'rotate-180 text-amber-600 dark:text-amber-400' : ''
+                      className={`w-5 h-5 text-slate-500 dark:text-slate-300 shrink-0 transition-transform duration-200 ${
+                        isOpen ? 'rotate-180 text-amber-600 dark:text-amber-300' : ''
                       }`}
                     />
                   </button>
                   {isOpen && (
-                    <p className="pb-5 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <p className="pb-5 text-sm sm:text-base text-slate-600 dark:text-slate-200 leading-relaxed">
                       {tr(lang, faq.a, taFaq?.a ?? faq.a)}
                     </p>
                   )}

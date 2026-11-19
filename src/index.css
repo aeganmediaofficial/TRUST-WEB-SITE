@@ -11,6 +11,11 @@
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   h1, h2, h3, .font-display {

@@ -123,16 +123,16 @@ export default function DonatePage() {
                       : 'bg-slate-50 dark:bg-[#10192D] text-slate-900 dark:text-white border-slate-200 dark:border-white/10 hover:border-amber-500/60'
                   }`}
                 >
-                  <p className={`text-xs font-medium mb-1 ${active ? 'text-amber-400' : 'text-amber-700 dark:text-amber-400'}`}>
+                  <p className={`text-xs font-medium mb-1 ${active ? 'text-amber-300' : 'text-amber-700 dark:text-amber-300'}`}>
                     {lang === 'ta' ? fund.english : fund.tamil}
                   </p>
                   <h3 className="text-lg font-semibold mb-2">
                     {tr(lang, fund.english, taF?.title ?? fund.tamil)}
                   </h3>
-                  <p className={`text-xs leading-relaxed mb-4 flex-1 ${active ? 'text-slate-300' : 'text-slate-600 dark:text-slate-300'}`}>
+                  <p className={`text-xs leading-relaxed mb-4 flex-1 ${active ? 'text-slate-200' : 'text-slate-600 dark:text-slate-200'}`}>
                     {tr(lang, fund.desc, taF?.desc ?? fund.desc)}
                   </p>
-                  <p className={`text-xs font-semibold tabular-nums pt-3 border-t ${active ? 'border-white/15 text-amber-300' : 'border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300'}`}>
+                  <p className={`text-xs font-semibold tabular-nums pt-3 border-t ${active ? 'border-white/15 text-amber-300' : 'border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-200'}`}>
                     {tr(lang, 'Target:', 'இலக்கு:')} {tr(lang, fund.target, taF?.target ?? fund.target)}
                   </p>
                 </button>
@@ -146,10 +146,10 @@ export default function DonatePage() {
                 <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 inline-flex items-center justify-center mx-auto">
                   <Check className="w-7 h-7" />
                 </div>
-                <p className="text-2xl font-semibold text-amber-700 dark:text-amber-400" style={{ fontFamily: 'var(--font-tamil)' }}>
+                <p className="text-2xl font-semibold text-amber-700 dark:text-amber-300" style={{ fontFamily: 'var(--font-tamil)' }}>
                   நன்றி — உங்கள் நன்கொடை பதிவு செய்யப்பட்டது!
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
+                <p className="text-sm text-slate-600 dark:text-slate-200 max-w-md mx-auto leading-relaxed">
                   {tr(
                     lang,
                     `Thank you for pledging ₹${amount.toLocaleString('en-IN')} (${frequency}) towards ${activeFund.english}. Our office will share UPI / bank transfer details and receipt on your WhatsApp & email.`,
@@ -168,7 +168,7 @@ export default function DonatePage() {
               <form onSubmit={handleSubmit} noValidate className="space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-white/10">
                   <div>
-                    <p className="text-xs text-amber-700 dark:text-amber-400 font-medium">
+                    <p className="text-xs text-amber-700 dark:text-amber-300 font-medium">
                       {lang === 'ta' ? activeFund.english : activeFund.tamil}
                     </p>
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{activeFundTitle}</h3>
@@ -188,7 +188,7 @@ export default function DonatePage() {
                         className={`px-3.5 py-1.5 rounded-md text-xs font-semibold transition-colors ${
                           frequency === freq.id
                             ? 'bg-white dark:bg-amber-500 text-slate-950 shadow-sm'
-                            : 'text-slate-600 dark:text-slate-300'
+                            : 'text-slate-600 dark:text-slate-200'
                         }`}
                       >
                         {freq.label}
@@ -230,7 +230,7 @@ export default function DonatePage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="don-name" className="block text-xs font-medium text-slate-700 dark:text-slate-200 mb-1.5">
-                      {tr(lang, 'Full Name', 'முழு பெயர்')} <span className="text-rose-500">*</span>
+                      {tr(lang, 'Full Name', 'முழு பெயர்')} <span className="text-rose-500 dark:text-rose-400">*</span>
                     </label>
                     <input
                       id="don-name"
@@ -238,12 +238,12 @@ export default function DonatePage() {
                       type="text"
                       required
                       placeholder={tr(lang, 'Your name', 'உங்கள் பெயர்')}
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                   <div>
                     <label htmlFor="don-mobile" className="block text-xs font-medium text-slate-700 dark:text-slate-200 mb-1.5">
-                      {tr(lang, 'Mobile / WhatsApp', 'மொபைல் / WhatsApp')} <span className="text-rose-500">*</span>
+                      {tr(lang, 'Mobile / WhatsApp', 'மொபைல் / WhatsApp')} <span className="text-rose-500 dark:text-rose-400">*</span>
                     </label>
                     <input
                       id="don-mobile"
@@ -251,12 +251,12 @@ export default function DonatePage() {
                       type="tel"
                       required
                       placeholder="+91 XXXXX XXXXX"
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                   <div>
                     <label htmlFor="don-email" className="block text-xs font-medium text-slate-700 dark:text-slate-200 mb-1.5">
-                      {tr(lang, 'Email', 'மின்னஞ்சல்')} <span className="text-rose-500">*</span>
+                      {tr(lang, 'Email', 'மின்னஞ்சல்')} <span className="text-rose-500 dark:text-rose-400">*</span>
                     </label>
                     <input
                       id="don-email"
@@ -264,7 +264,7 @@ export default function DonatePage() {
                       type="email"
                       required
                       placeholder="your@email.com"
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                   <div>
@@ -276,7 +276,7 @@ export default function DonatePage() {
                       name="pan"
                       type="text"
                       placeholder="ABCDE1234F"
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-white dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                 </div>

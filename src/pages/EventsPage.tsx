@@ -181,7 +181,7 @@ export default function EventsPage() {
                   className={`px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors whitespace-nowrap ${
                     filter === tab.id
                       ? 'bg-white dark:bg-amber-500 text-slate-950 shadow-sm'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
+                      : 'text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
                   {tab.label}
@@ -210,8 +210,8 @@ export default function EventsPage() {
                     <SmartImage src={ev.image} alt={title} className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
-                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-500 dark:text-slate-400 tabular-nums mb-2">
-                      <span className="font-semibold text-amber-700 dark:text-amber-400">{cat}</span>
+                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-500 dark:text-slate-300 tabular-nums mb-2">
+                      <span className="font-semibold text-amber-700 dark:text-amber-300">{cat}</span>
                       <span aria-hidden="true">·</span>
                       <span className={remaining === 0 ? 'text-rose-600 dark:text-rose-400 font-semibold' : ''}>
                         {remaining > 0
@@ -227,24 +227,24 @@ export default function EventsPage() {
                         </>
                       )}
                     </div>
-                    <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-0.5">
+                    <p className="text-xs font-medium text-amber-700 dark:text-amber-300 mb-0.5">
                       {lang === 'ta' ? ev.english : ev.tamil}
                     </p>
                     <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">{title}</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5 flex-1">
+                    <p className="text-sm text-slate-600 dark:text-slate-200 leading-relaxed mb-5 flex-1">
                       {desc}
                     </p>
-                    <div className="space-y-2 text-xs text-slate-600 dark:text-slate-300 pb-5 mb-5 border-b border-slate-200 dark:border-white/10 tabular-nums">
+                    <div className="space-y-2 text-xs text-slate-600 dark:text-slate-200 pb-5 mb-5 border-b border-slate-200 dark:border-white/10 tabular-nums">
                       <p className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                        <Calendar className="w-4 h-4 text-amber-600 dark:text-amber-300 shrink-0" />
                         <span>{date}</span>
                       </p>
                       <p className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                        <Clock className="w-4 h-4 text-amber-600 dark:text-amber-300 shrink-0" />
                         <span>{time}</span>
                       </p>
                       <p className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                        <MapPin className="w-4 h-4 text-amber-600 dark:text-amber-300 shrink-0" />
                         <span>{venue}</span>
                       </p>
                     </div>
@@ -292,10 +292,10 @@ export default function EventsPage() {
                 <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 inline-flex items-center justify-center mx-auto">
                   <Check className="w-7 h-7" />
                 </div>
-                <p className="text-2xl font-semibold text-amber-700 dark:text-amber-400" style={{ fontFamily: 'var(--font-tamil)' }}>
+                <p className="text-2xl font-semibold text-amber-700 dark:text-amber-300" style={{ fontFamily: 'var(--font-tamil)' }}>
                   பங்கேற்பு உறுதி செய்யப்பட்டது!
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
+                <p className="text-sm text-slate-600 dark:text-slate-200 max-w-md mx-auto">
                   {tr(
                     lang,
                     `Your seat for ${selectedEvent.english} (${selectedEvent.date}) has been registered. We look forward to welcoming you.`,
@@ -359,7 +359,7 @@ export default function EventsPage() {
                       type="text"
                       required
                       placeholder={tr(lang, 'Your full name', 'உங்கள் முழு பெயர்')}
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                   <div>
@@ -372,7 +372,7 @@ export default function EventsPage() {
                       type="tel"
                       required
                       placeholder="+91 XXXXX XXXXX"
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                   <div>
@@ -385,7 +385,7 @@ export default function EventsPage() {
                       type="email"
                       required
                       placeholder="your@email.com"
-                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     />
                   </div>
                   <div>
@@ -413,7 +413,7 @@ export default function EventsPage() {
                     name="notes"
                     rows={2}
                     placeholder={tr(lang, 'Any dietary or accommodation requests...', 'உணவு அல்லது தங்குமிடத் தேவைகள்...')}
-                    className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-2.5 rounded-lg text-sm bg-slate-50 dark:bg-[#0B1324] border border-slate-300 dark:border-white/15 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                   />
                 </div>
 

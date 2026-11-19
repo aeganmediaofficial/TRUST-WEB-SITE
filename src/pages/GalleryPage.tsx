@@ -208,7 +208,7 @@ export default function GalleryPage() {
                   className={`px-3.5 py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors whitespace-nowrap ${
                     category === tab.id
                       ? 'bg-white dark:bg-amber-500 text-slate-950 shadow-sm'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
+                      : 'text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
                   {tab.label}

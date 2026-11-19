@@ -11,10 +11,10 @@ export function PrivacyPage() {
         <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 dark:text-white">
           {tr(lang, 'Privacy Policy', 'தனியுரிமைக் கொள்கை')}
         </h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400">
+        <p className="text-sm text-slate-500 dark:text-slate-300">
           {tr(lang, SITE_INFO.name, SITE_INFO.tamilName)} · {tr(lang, SITE_INFO.addressEnglish, 'மல்லன்குழி, தாளவாடி, தமிழ்நாடு, இந்தியா')}
         </p>
-        <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+        <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-200 leading-relaxed">
           <p>
             {tr(
               lang,
@@ -28,13 +28,13 @@ export function PrivacyPage() {
               'We never sell, rent, or disclose devotee or participant information to third-party advertisers. If you wish to update or delete your submitted registration details, please reach us at ',
               'பக்தர்கள் அல்லது பங்கேற்பாளர்களின் தகவல்களை நாங்கள் மூன்றாம் தரப்பினருக்கு ஒருபோதும் விற்பனை செய்யவோ பகிரவோ மாட்டோம். உங்கள் விவரங்களைத் திருத்த அல்லது நீக்க தொடர்பு கொள்ள: '
             )}
-            <a href={`mailto:${SITE_INFO.email}`} className="text-amber-700 dark:text-amber-400 underline">
+            <a href={`mailto:${SITE_INFO.email}`} className="text-amber-700 dark:text-amber-300 underline">
               {SITE_INFO.email}
             </a>{' '}
             ({SITE_INFO.phoneDisplay}).
           </p>
         </div>
-        <Link to="/" className="inline-block text-sm font-semibold text-amber-700 dark:text-amber-400 hover:underline">
+        <Link to="/" className="inline-block text-sm font-semibold text-amber-700 dark:text-amber-300 hover:underline">
           ← {tr(lang, 'Return to Home', 'முகப்புப் பக்கத்திற்குச் செல்ல')}
         </Link>
       </div>
@@ -50,10 +50,10 @@ export function TermsPage() {
         <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900 dark:text-white">
           {tr(lang, 'Terms of Use', 'பயன்பாட்டு விதிமுறைகள்')}
         </h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400">
+        <p className="text-sm text-slate-500 dark:text-slate-300">
           {tr(lang, SITE_INFO.name, SITE_INFO.tamilName)} · {tr(lang, SITE_INFO.addressEnglish, 'மல்லன்குழி, தாளவாடி, தமிழ்நாடு, இந்தியா')}
         </p>
-        <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+        <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-200 leading-relaxed">
           <p>
             {tr(
               lang,
@@ -67,13 +67,13 @@ export function TermsPage() {
               'Participants joining physical retreats at our Thalavadi ashram agree to uphold peaceful, respectful conduct aligned with ashram discipline. For questions regarding programmes, orders, or contributions, contact ',
               'தாளவாடி ஆசிரமத்தில் நேரடி முகாம்களில் பங்கேற்பவர்கள் ஆசிரம ஒழுங்குமுறைக்கும் அமைதிக்கும் மதிப்பளிக்க வேண்டும். நிகழ்ச்சிகள், ஆர்டர்கள் அல்லது நன்கொடைகள் குறித்த கேள்விகளுக்கு: '
             )}
-            <a href={`mailto:${SITE_INFO.email}`} className="text-amber-700 dark:text-amber-400 underline">
+            <a href={`mailto:${SITE_INFO.email}`} className="text-amber-700 dark:text-amber-300 underline">
               {SITE_INFO.email}
             </a>
             .
           </p>
         </div>
-        <Link to="/" className="inline-block text-sm font-semibold text-amber-700 dark:text-amber-400 hover:underline">
+        <Link to="/" className="inline-block text-sm font-semibold text-amber-700 dark:text-amber-300 hover:underline">
           ← {tr(lang, 'Return to Home', 'முகப்புப் பக்கத்திற்குச் செல்ல')}
         </Link>
       </div>
