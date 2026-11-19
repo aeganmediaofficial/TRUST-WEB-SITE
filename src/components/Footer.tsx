@@ -221,7 +221,7 @@ export default function Footer() {
             </div>
             <PWAInstallButton />
             <a
-              href="/pulipani-siddhar-aadheenam.html?download=1"
+              href="./pulipani-siddhar-aadheenam.html?download=1"
               download="pulipani-siddhar-aadheenam.html"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-white/15 bg-white dark:bg-white/10 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:border-amber-500 hover:text-amber-700 dark:hover:border-amber-400 dark:hover:text-amber-400 transition-colors whitespace-nowrap shrink-0"
             >

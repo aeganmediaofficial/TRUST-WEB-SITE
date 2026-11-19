@@ -1,18 +1,18 @@
 export const IMAGES = {
-  heroAshram: '/src/assets/images/hero_temple_ashram_1795007316512.jpg',
-  siddharLineage: '/src/assets/images/about_siddhar_lineage_1795007316463.jpg',
-  yogaMeditation: '/src/assets/images/yoga_meditation_hall_1795007317190.jpg',
-  herbalLiving: '/src/assets/images/herbal_siddha_living_1795007316663.jpg',
-  annadhanamSeva: '/src/assets/images/annadhanam_community_seva_1795007317965.jpg',
-  homaCeremony: '/src/assets/images/sacred_homa_ceremony_1795007319325.jpg',
-  templeHeritage: '/src/assets/images/temple_gopuram_heritage_1795007318668.jpg',
-  sacredDiya: '/src/assets/images/sacred_brass_diya_1795007319457.jpg',
+  heroAshram: './src/assets/images/hero_temple_ashram_1795007316512.jpg',
+  siddharLineage: './src/assets/images/about_siddhar_lineage_1795007316463.jpg',
+  yogaMeditation: './src/assets/images/yoga_meditation_hall_1795007317190.jpg',
+  herbalLiving: './src/assets/images/herbal_siddha_living_1795007316663.jpg',
+  annadhanamSeva: './src/assets/images/annadhanam_community_seva_1795007317965.jpg',
+  homaCeremony: './src/assets/images/sacred_homa_ceremony_1795007319325.jpg',
+  templeHeritage: './src/assets/images/temple_gopuram_heritage_1795007318668.jpg',
+  sacredDiya: './src/assets/images/sacred_brass_diya_1795007319457.jpg',
 } as const;
 
 export const SITE_INFO = {
   name: 'Pulipani Siddhar Aadheenam',
   tamilName: 'புலிப்பாணி சித்தர் ஆதீனம்',
-  logoUrl: '/assets/aistudio/Picsart_26-10-14_19-29-45-183_64d9621d.png',
+  logoUrl: './assets/aistudio/Picsart_26-10-14_19-29-45-183_64d9621d.png',
   invocation: 'ஓம் நமச்சிவாய',
   blessingMotto: '"அன்பும் • அறிவும் • ஞானமும் எங்கும் நிலைக்கட்டும்"',
   taglineTamil: 'ஆன்மீகம், இயற்கை, மனிதநேயம்',

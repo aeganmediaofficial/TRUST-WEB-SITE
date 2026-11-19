@@ -7,6 +7,7 @@ import {VitePWA} from 'vite-plugin-pwa';
 
 export default defineConfig(() => {
   return {
+    base: './',
     plugins: [
       react(),
       tailwindcss(),
@@ -14,7 +15,7 @@ export default defineConfig(() => {
         registerType: 'autoUpdate',
         includeAssets: ['icon.svg', 'apple-touch-icon.png'],
         manifest: {
-          id: '/',
+          id: './',
           name: 'Pulipani Siddhar Aadheenam',
           short_name: 'Aadheenam',
           description:
@@ -23,8 +24,8 @@ export default defineConfig(() => {
           background_color: '#0B1324',
           display: 'standalone',
           orientation: 'portrait',
-          scope: '/',
-          start_url: '/',
+          scope: './',
+          start_url: './',
           icons: [
             {
               src: 'pwa-192x192.png',

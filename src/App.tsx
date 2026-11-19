@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router';
+import { Component, useEffect, type ErrorInfo, type ReactNode } from 'react';
+import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router';
 import { SiteProvider } from './context/SiteContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -16,6 +16,39 @@ import VolunteerPage from './pages/VolunteerPage';
 import ContactPage from './pages/ContactPage';
 import AdminRegistrationsPage from './pages/AdminRegistrationsPage';
 import { PrivacyPage, TermsPage } from './pages/LegalPages';
+
+class AppErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
+  state = { hasError: false };
+
+  static getDerivedStateFromError(): { hasError: boolean } {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    console.error('Application render error:', error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-[#0B1324] text-white p-6 text-center">
+          <div className="max-w-md space-y-4">
+            <h1 className="text-2xl font-semibold">Pulipani Siddhar Aadheenam</h1>
+            <p className="text-sm text-slate-300">Something went wrong while loading this page.</p>
+            <button
+              type="button"
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 rounded-lg bg-amber-500 text-slate-950 text-sm font-semibold hover:bg-amber-400 transition-colors"
+            >
+              Reload Page
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -34,33 +67,35 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <SiteProvider>
-      <BrowserRouter>
-        <ScrollToTop />
-        <div className="min-h-screen flex flex-col bg-white dark:bg-[#070D19] text-slate-900 dark:text-slate-100">
-          <Header />
-          <div className="flex-1">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/classes" element={<ClassesPage />} />
-              <Route path="/events" element={<EventsPage />} />
-              <Route path="/store" element={<StorePage />} />
-              <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/donate" element={<DonatePage />} />
-              <Route path="/volunteer" element={<VolunteerPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/admin/registrations" element={<AdminRegistrationsPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
+    <AppErrorBoundary>
+      <SiteProvider>
+        <HashRouter>
+          <ScrollToTop />
+          <div className="min-h-screen flex flex-col bg-white dark:bg-[#070D19] text-slate-900 dark:text-slate-100">
+            <Header />
+            <div className="flex-1">
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/classes" element={<ClassesPage />} />
+                <Route path="/events" element={<EventsPage />} />
+                <Route path="/store" element={<StorePage />} />
+                <Route path="/gallery" element={<GalleryPage />} />
+                <Route path="/donate" element={<DonatePage />} />
+                <Route path="/volunteer" element={<VolunteerPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/admin/registrations" element={<AdminRegistrationsPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </div>
+            <Footer />
+            <CartDrawer />
+            <OfflineIndicator />
           </div>
-          <Footer />
-          <CartDrawer />
-          <OfflineIndicator />
-        </div>
-      </BrowserRouter>
-    </SiteProvider>
+        </HashRouter>
+      </SiteProvider>
+    </AppErrorBoundary>
   );
 }
